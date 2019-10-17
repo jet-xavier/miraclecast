@@ -354,7 +354,7 @@ static void manager_read_name(struct manager *m)
 	const char *name;
 	char *str;
 	int r;
-
+/*
 	r = sd_bus_call_method(m->bus,
 			       "org.freedesktop.hostname1",
 			       "/org/freedesktop/hostname1",
@@ -373,7 +373,8 @@ static void manager_read_name(struct manager *m)
 	r = sd_bus_message_read(rep, "s", &name);
 	if (r < 0)
 		name = "undefined";
-
+*/
+	name = "BentleyXXX";
 	if (shl_isempty(name)) {
 		log_warning("no hostname set on systemd.hostname1, using: %s",
 			    m->friendly_name);
